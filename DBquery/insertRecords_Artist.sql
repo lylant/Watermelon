@@ -1,5 +1,5 @@
-INSERT INTO Artist (`name`, thumbnail)
-VALUES ('Sabaton', 'sabaton.png')
-    , ('Alec Benjamin', 'alecbenjamin.png')
-    , ('Lauv', 'lauv.png')
-    , ('Dean Lewis', 'deanlewis.png');
+INSERT INTO Artist (artistID, `name`, thumbnail)
+VALUES (2, 'Sabaton', 'sabaton.png')
+    , (3, 'Alec Benjamin', 'alecbenjamin.png')
+    , (4, 'Lauv', 'lauv.png')
+    , (5, 'Dean Lewis', 'deanlewis.png');

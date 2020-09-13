@@ -45,10 +45,6 @@ This project is to build a website for music streaming service. This website sho
 
 > This table provides details about songs. The table contains Youtube address for each track for play a Youtube clip.
 
-#### User
-
-> This table provides details about members of Watermelon. It contains their personal information of the member, and login credentials. The passwords are encrypted using the **sha256** algorithm, the plain text passwords will not be saved the table.
-
 #### UserPlaylist
 
 > This table provides details about playlists that be created by members.
@@ -57,10 +53,41 @@ This project is to build a website for music streaming service. This website sho
 
 > This table records which tracks are added for each playlist.
 
+#### User
 
-## 2.2. Page Functionality
+> This table provides details about members of Watermelon. It contains their personal information of the member, and login credentials. The passwords are encrypted using the **sha256** algorithm, the plain text passwords will not be saved the table.
 
-### 2.2.1. Search
+#### Role
+
+> This table explains each user role of the website. The role is used for the authorization.
+
+#### UserRole
+
+> This table contains each user's current role.
+
+
+## 2.2. Security
+
+### 2.2.1. URL Parameter Manipulation
+
+There are several routines that checks if a given parameter comes in, directing an artist, album, track, or playlist is using GET requests to specify the ID. This website can detect some invalid approaches by tampering the URL parameter. For example, a playlist can be accessed by the owner, cannot be accessed by other user or an anonymous. If the invalid approaches are detected, the page will display an error message instead.
+
+<p align="center">
+    <img src="/_miscs/security01.PNG">
+</p>
+
+### 2.2.2. SQL Injection
+
+There are some web forms to be submitted for executing queries, searching feature and sign in feature are using POST requests to pass over the parameter to the queries. Since there will be a potential threat of SQL Injection, all inputs from the user will be sanitised on the client-side. Also, the prepared statements are used to avoid SQL Injections on the server-side before the queries are executed.
+
+### 2.2.3. Password Encryption
+
+The passwords stored in the **password** field of the **User** table are encrypted using **sha256** algorithm.
+
+
+## 2.3. Page Functionality
+
+### 2.3.1. Search
 
 <p align="center">
     <img src="/_miscs/search01.PNG">
@@ -79,7 +106,7 @@ If there is no record matching the keyword, the page will display an appropriate
 </p>
 
 
-### 2.2.2. Artist Detail
+### 2.3.2. Artist Detail
 
 <p align="center">
     <img src="/_miscs/artist01.PNG">
@@ -88,7 +115,7 @@ If there is no record matching the keyword, the page will display an appropriate
 The user can view detail information about a specific artist. The page shows the profile image, name of the artist, and a list of all albums by the artist. The list displays a thumbnail, a name, and the year released for each album. The user will be able to access each album if they want to view the details of a specific album.
 
 
-### 2.2.3. Album Detail
+### 2.3.3. Album Detail
 
 <p align="center">
     <img src="/_miscs/album01.png">
@@ -97,7 +124,7 @@ The user can view detail information about a specific artist. The page shows the
 The user can view detail information about a specific album. The page shows the album cover image, album title, artist name, the year the album was released, and a list of all songs from the album. The list displays a song title, and its length. The user can access each song if they want to view the details of a specific title.
 
 
-### 2.2.4. Track Detail
+### 2.3.4. Track Detail
 
 <p align="center">
     <img src="/_miscs/track01.png">
@@ -106,7 +133,7 @@ The user can view detail information about a specific album. The page shows the 
 The user can view detail information about a specific track. The page shows the cover image, track title, album title, track length, and a Youtube clip to play the song using the Youtube track address.
 
 
-### 2.2.5. Playlist
+### 2.3.5. Playlist
 
 <p align="center">
     <img src="/_miscs/mylist01.png">
@@ -114,16 +141,10 @@ The user can view detail information about a specific track. The page shows the 
 
 Playlists can only be created and accessed by logged-in users. Playlists belongs to a specific user; logged-in user cannot access any other user's playlist. Anonymous cannot create or access the playlists. Logged-in user can access the page for the members which display the name of the user, the category of the user, and a list of all playlist names. The user can access each playlist from the list.
 
-The web form to create a new playlist is hidden and will appear when the user click the hyperlink, by JavaScript.
+The web form to create a new playlist is hidden and will appear when the user click the hyperlink, by JavaScript. Once the form is submitted and it is valid, an empty new playlist will be added to the list.
 
 <p align="center">
     <img src="/_miscs/mylist02.png">
-</p>
-
-Once the form is submitted and it is valid, an empty new playlist will be added to the list.
-
-<p align="center">
-    <img src="/_miscs/mylist03.PNG">
 </p>
 
 <hr />
@@ -139,15 +160,11 @@ The user can view detail contents of a specific playlist. The page shows the own
 The web form to add a track to playlists is hidden to anonymous but only seen by logged-in users. The user can add the song to their playlist(s) by clicking the hyperlink. A number of playlists can be chosen at the same time.
 
 <p align="center">
-    <img src="/_miscs/mylist05.PNG">
-</p>
-
-<p align="center">
     <img src="/_miscs/mylist06.PNG">
 </p>
 
 
-### 2.2.6. User Authentication
+### 2.3.6. User Authentication
 
 <p align="center">
     <img src="/_miscs/auth01.PNG">
@@ -161,36 +178,48 @@ The logged-in user can see their name and the category on the left-side of the n
     <img src="/_miscs/auth02.PNG">
 </p>
 
-## 2.3. Security
-
-### 2.3.1. URL Parameter Manipulation
-
-There are several routines that checks if a given parameter comes in, directing an artist, album, track, or playlist is using GET requests to specify the ID. This website can detect some invalid approaches by tampering the URL parameter. For example, a playlist can be accessed by the owner, cannot be accessed by other user or an anonymous. If the invalid approaches are detected, the page will display an error message instead.
-
-<p align="center">
-    <img src="/_miscs/security01.PNG">
-</p>
-
-### 2.3.2. SQL Injection
-
-There are some web forms to be submitted for executing queries, searching feature and sign in feature are using POST requests to pass over the parameter to the queries. Since there will be a potential threat of SQL Injection, all inputs from the user will be sanitised on the client-side. Also, the prepared statements are used to avoid SQL Injections on the server-side before the queries are executed.
-
-### 2.3.3. Password Encryption
-
-The passwords stored in the **password** field of the **User** table are encrypted using **sha256** algorithm.
 
 # 3. Installation
 
-1. Establish a database on the server by executing quries in `/DBquery` folder
-2. Create `conn.php` in the `/Watermelon` folder
-3. Modify `conn.php` to invoke connection to the database (see below for the details)
-4. Upload all contents in the `Watermelon` folder on the server
+## 3.1. Sample Database
+
+You can establish a sample database on the server by executing quries in `/DBquery` folder.
+
+1. `createTables.sql`
+2. `insertRecords_Artist.sql`
+3. `insertRecords_Album.sql`
+4. `insertRecords_Track.sql`
+5. `insertRecords_User.sql`
+6. `insertRecords_UserPlaylist.sql`
+7. `insertRecords_Playlist.sql`
+8. `insertRecords_Role.sql`
+9. `insertRecords_UserRole.sql`
+
+<hr />
+
+The password stored in the **password** field of the **User** table are encrypted using the **sha256** algorithm. These are the plain text passwords for the sample database records.
+
+Username | Password
+---------|----------
+admin    |p@ssw0rd
+pringles |original
+ringfit  |adventure
+refresh  |eyedrop
+
+
+## 3.2. Main Website
+
+Once the database is established, the website can be operational by following steps.
+
+1. Create `conn.php` in the `/Watermelon` folder
+2. Modify `conn.php` to invoke connection to the database (see below for the details)
+3. Upload all contents in the `Watermelon` folder on the server
 
 <hr />
 
 #### conn.php
 
->To connect to the database, `conn.php` file with the following PHP code is needed:
+> To connect to the database, `conn.php` file with the following PHP code is needed:
 ```
 <?php
    $dbConn = new mysqli("localhost", "USERNAME", "PASSWORD", "DATABASE_NAME");
