@@ -1,0 +1,930 @@
+body {
+    overflow-y: scroll;
+    margin:10px;
+    padding:0;
+    font-family: Arial;
+    font-size:1em;
+    background-color:#ffffff;
+    color:#000000;
+}
+
+th {
+    background-color: #fafafa;
+}
+
+tr:hover {
+    background-color: #fafafa;
+}
+
+.invalidIcon {
+    width: 20px;
+    height: 20px;
+
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.invalidError {
+    color: #666;
+    text-align: center;
+
+    /* align the message to centre: ".invalidIcon" (width + padding-right) */
+    margin-right: 30px;
+}
+
+
+/* navbar.php */
+
+    /* 
+    * Create a top navigation bar
+    * https://www.w3schools.com/howto/howto_js_topnav.asp
+    */
+
+.navigationBar {
+    width: 80%;
+    height: 40px;
+    
+    border-bottom: 1px solid #999;
+    margin: auto;
+}
+
+.navigationBar a {
+    color: #888;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+
+    width: 80px;
+    float: right;
+    border-radius: 15px;
+    padding: 8px 10px;
+}
+
+.navigationBar a:hover {
+    background-color: #efefef;
+}
+
+    /*
+    * End of the Code Snippet
+    */
+
+
+
+.navigationBar p {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 1.6em;
+    color: #444;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+.navigationBar p .username {
+    color: #000;
+    font-weight: bold;
+}
+
+.navigationBar p .Guest {
+    color: #444;
+    font-weight: bold;
+}
+
+.navigationBar p .Free {
+    color: #339;
+    font-weight: bold;
+}
+
+.navigationBar p .Family {
+    color: #393;
+    font-weight: bold;
+}
+
+.navigationBar p .Premium {
+    color: #ffdf00;
+    font-weight: bold;
+    text-shadow: 1px 1px #aaa;
+}
+
+
+
+/* search.php */
+
+.searchDiv {
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+    margin: 50px auto;
+}
+
+.searchDivHeader {
+    height: 100px;
+}
+
+.searchDivHeader h1 {
+    font-size: 3.6em;
+    font-family: 'Anton', sans-serif;
+}
+
+.searchDivBody {
+    margin-top: 10px;
+    height: auto;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.searchField {
+    width: 300px;
+    height: 30px;
+
+    /* align the search box to centre: ".searchIcon" (width + padding-right) */
+    margin-right: 30px;
+    
+    padding: 0 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.searchField:hover {
+    box-shadow: 0 0 6px #707070;
+}
+
+.searchField:focus {
+    /* prevent the unexpected focusing outline from browsers */
+    outline: none;
+}
+
+.searchButton {
+    color:#555;
+    width: 120px;
+    height: 30px;
+
+    background-color: #efefef;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.searchButton:hover {
+    border: 1px solid #aaa;
+}
+
+.searchButton:focus {
+    outline: none;
+    border: 1px solid #266;
+}
+
+.searchError {
+    color: #666;
+    text-align: center;
+
+    /* align the message to centre: ".searchIcon" (width + padding-right) */
+    margin-right: 30px;
+}
+
+.searchError .bold {
+    font-weight: bold;
+}
+
+.searchOutput {
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+    margin: auto;
+}
+
+.searchOutput h1 {
+    font-size: 1.6em;
+    font-family: 'Ubuntu', sans-serif;
+
+    margin-top: 40px;
+    margin-right: 30%;
+}
+
+.searchOutputTable table {
+    width: 40%;
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+
+    margin-left: 30%;
+}
+
+.searchOutputTable th, td {
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+}
+
+.searchOutputTable .widthThumbnail {
+    width: 16%;
+}
+
+.searchOutputTable .widthArtist {
+    width: 84%;
+}
+
+.searchOutputTable .widthAlbum1 {
+    width: 54%;
+}
+
+.searchOutputTable .widthAlbum2 {
+    width: 30%;
+}
+
+.searchOutputTable .widthTrack1 {
+    width: 46%;
+}
+
+.searchOutputTable .widthTrack2 {
+    width: 34%;
+}
+
+.searchOutputTable .widthTrack3 {
+    width: 20%;
+}
+
+.searchOutputTable .thumbnail {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #666;
+}
+
+.searchOutput a {
+    color: #000;
+    text-decoration: none;
+}
+
+.searchOutput a:hover {
+    color: #266;
+    text-decoration: underline;
+}
+
+
+
+/* play.php */
+
+.playDiv {
+    width: 80%;
+    height: auto;
+
+    text-align: center;
+    margin: 50px auto;
+}
+
+.playDivHeader {
+    width: 80%;
+    height: 160px;
+
+    margin: auto;
+}
+
+.playDivHeader img {
+    width: 140px;
+    height: 140px;
+    border: 2px solid #666;
+
+    margin-left: 15%;
+    margin-right: 20px;
+    float: left;
+}
+
+.playDivHeader p {
+    font-size: 2.0em;
+    font-family: 'Neuton', serif;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+
+    padding-top: 16px;
+}
+
+.playDivHeader .subText {
+    font-size: 0.6em;
+    font-weight: 300;
+    color: #444;
+
+    margin-left: 4px;
+}
+
+.playDivHeader .subHyperlink {
+    font-size: 0.4em;
+    font-family: Arial;
+    color:#555;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+.playDivBody {
+    width: 70%;
+    height: auto;
+
+    text-align: center;
+    margin: auto;
+}
+
+.playDivBody h1 {
+    font-size: 1.4em;
+    font-family: 'Ubuntu', sans-serif;
+
+    margin-top: 30px;
+    margin-right: 64%;
+}
+
+.playDivBody table {
+    width: 70%;
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+
+    margin-left: 12%;
+}
+
+.playDivBody th, td {
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+}
+
+.playDivBody .widthThumbnail {
+    width: 16%;
+}
+
+.playDivBody .widthArtist1 {
+    width: 64%;
+}
+
+.playDivBody .widthArtist2 {
+    width: 20%;
+}
+
+.playDivBody .widthAlbum1 {
+    width: 80%;
+}
+
+.playDivBody .widthAlbum2 {
+    width: 20%;
+}
+
+.playDivBody .widthPlaylist1 {
+    width: 44%;
+}
+
+.playDivBody .widthPlaylist2 {
+    width: 24%;
+}
+
+.playDivBody .widthPlaylist3 {
+    width: 22%;
+}
+
+.playDivBody .widthPlaylist4 {
+    width: 10%;
+}
+
+.playDivBody .thumbnail {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #666;
+}
+
+.playDivBody p {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.playDiv a {
+    color: #000;
+    text-decoration: none;
+}
+
+.playDiv a:hover {
+    color: #266;
+    text-decoration: underline;
+}
+
+
+/* login.php */
+
+.loginDiv {
+    width: 55%;
+    height: auto;
+
+    text-align: center;
+    margin: 50px auto;
+}
+
+.loginDivHeader {
+    height: auto;
+}
+
+.loginDivHeader h1 {
+    font-size: 3.6em;
+    font-family: 'Anton', sans-serif;
+
+    margin-bottom: 0px;
+}
+
+.loginDivHeader h2 {
+    font-size: 1.6em;
+    font-family: 'Anton', sans-serif;
+}
+
+.loginDivBody {
+    margin-top: 10px;
+    height: auto;
+}
+
+.loginField {
+    width: 300px;
+    height: 30px;
+    
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.loginField:focus {
+    /* prevent the unexpected focusing outline from browsers */
+    outline-color: #266;
+}
+
+.loginButton {
+    color:#555;
+    width: 120px;
+    height: 30px;
+
+    background-color: #efefef;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.loginButton:hover {
+    border: 1px solid #aaa;
+}
+
+.loginButton:focus {
+    outline: none;
+    border: 1px solid #266;
+}
+
+.loginDiv img {
+    width: 20px;
+    height: 20px;
+
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.loginDiv .hidden {
+    visibility: hidden;
+}
+
+.loginDiv .visible {
+    visibility: visible;
+}
+
+.loginError {
+    color: #933;
+    text-align: center;
+
+    /* align the message to centre: ".loginDiv img" (width + padding-right) */
+    margin-right: 30px;
+}
+
+
+.loginDivBody a {
+    font-size: 0.8em;
+    font-family: Arial;
+    color:#555;
+    margin-left: 12%;
+    margin-top: 5px;
+
+    color: #000;
+    text-decoration: none;
+}
+
+
+.loginDivBody a:hover {
+    color:#266;
+    text-decoration: underline;
+}
+
+#newMemberDiv {
+    width: 400px;
+    height: auto;
+    display: none;
+
+    margin-left: 30%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#newMemberDiv h1 {
+    font-size: 1.6em;
+    font-family: 'Anton', sans-serif;
+}
+
+.signUpField {
+    width: 250px;
+    height: 30px;
+    
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.signUpField:focus {
+    /* prevent the unexpected focusing outline from browsers */
+    outline-color: #266;
+}
+
+.signUpButton {
+    color:#555;
+    width: 120px;
+    height: 30px;
+
+    background-color: #efefef;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.signUpButton:focus {
+    outline: none;
+    border: 1px solid #266;
+}
+
+#signUpError {
+    font-size: 0.8em;
+    color: #933;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* playlist.php */
+
+.playlistDiv {
+    width: 80%;
+    height: auto;
+
+    text-align: center;
+    margin: 50px auto;
+}
+
+.playlistDivHeader {
+    width: 80%;
+    height: 160px;
+
+    margin: auto;
+}
+
+.playlistDivHeader img {
+    width: 140px;
+    height: 140px;
+    border: 2px solid #666;
+
+    margin-left: 15%;
+    margin-right: 20px;
+    float: left;
+}
+
+.playlistDivHeader p {
+    font-size: 2.0em;
+    font-family: 'Neuton', serif;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+
+    padding-top: 16px;
+}
+
+.playlistDivHeader p .Free {
+    font-size: 0.7em;
+    font-weight: 300 bold;
+    color: #339;
+
+    margin-left: 4px;
+}
+
+.playlistDivHeader p .Family {
+    font-size: 0.7em;
+    font-weight: 300 bold;
+    color: #393;
+
+    margin-left: 4px;
+}
+
+.playlistDivHeader p .Premium {
+    font-size: 0.7em;
+    font-weight: 300 bold;
+    color: #ffdf00;
+    text-shadow: 1px 1px #aaa;
+
+    margin-left: 4px;
+}
+
+.playlistDivHeader .subText {
+    font-size: 0.6em;
+    font-weight: 300;
+    color: #444;
+
+    margin-left: 4px;
+}
+
+.playlistDivHeader .subHyperlink {
+    font-size: 0.4em;
+    font-family: Arial;
+    color:#555;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+
+.playlistDivHeader a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.playlistDivHeader a:hover {
+    color:#266;
+    text-decoration: underline;
+}
+
+#newPlaylistDiv {
+    width: 300px;
+    height: auto;
+    display: none;
+
+    margin-left: 23%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.newPlaylistField {
+    width: 250px;
+    height: 30px;
+    
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.newPlaylistField:focus {
+    /* prevent the unexpected focusing outline from browsers */
+    outline-color: #266;
+}
+
+.newPlaylistButton {
+    color:#555;
+    width: 120px;
+    height: 30px;
+
+    background-color: #efefef;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.newPlaylistButton:hover {
+    border: 1px solid #aaa;
+}
+
+.newPlaylistButton:focus {
+    outline: none;
+    border: 1px solid #266;
+}
+
+#newPlaylistError {
+    font-size: 0.8em;
+    color: #933;
+    text-align: center;
+
+    display: none;
+}
+
+
+
+.playlistDivBody {
+    width: 70%;
+    height: auto;
+
+    text-align: center;
+    margin: auto;
+}
+
+.playlistDivBody h1 {
+    font-size: 1.4em;
+    font-family: 'Ubuntu', sans-serif;
+
+    margin-top: 30px;
+    margin-right: 64%;
+}
+
+.playlistDivBody h2 {
+    font-size: 1.4em;
+    font-family: 'Ubuntu', sans-serif;
+
+    margin-top: 30px;
+    margin-right: 32%;
+}
+
+.addPlaylistButton {
+    color:#555;
+    width: 90px;
+    height: 30px;
+
+    float: right;
+    background-color: #efefef;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-left: 32%;
+}
+
+.addPlaylistButton:hover {
+    border: 1px solid #aaa;
+}
+
+.addPlaylistButton:focus {
+    outline: none;
+    border: 1px solid #266;
+}
+
+.playlistDivBody table {
+    width: 70%;
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+
+    margin-left: 12%;
+}
+
+.playlistDivBody th, td {
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+}
+
+.playlistDivBody .width1 {
+    width: 70%;
+}
+
+.playlistDivBody .width2 {
+    width: 15%;
+}
+
+.playlistDivBody .width3 {
+    width: 15%;
+}
+
+.playlistDivBody p {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.playlistDivBody a {
+    color: #000;
+    text-decoration: none;
+}
+
+.playlistDivBody a:hover {
+    color: #266;
+    text-decoration: underline;
+}
+
+    /* 
+    * Create responsive tables without <table> tag
+    * https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/
+    */
+.pseudoTable {
+    display: table;
+    width: 60%;
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+
+    margin-left: 12%;
+}
+
+.pseudoTableBody {
+    display: table-row-group;
+}
+
+.pseudoTableRow {
+    display: table-row;
+}
+
+.pseudoTableRow:hover {
+    background-color: #fafafa;
+}
+
+.pseudoTableCell1 {
+    display: table-cell;
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+
+    width: 70%;
+}
+
+.pseudoTableCell2 {
+    display: table-cell;
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+
+    width: 15%;
+}
+
+.pseudoTableCell3 {
+    display: table-cell;
+    border-bottom: 1px solid #999;
+    padding: 7px;
+    text-align: center;
+
+    width: 15%;
+}
+    /*
+    * End of the Code Snippet
+    */
+
+    /* 
+    * Create a custom checkbox
+    * https://www.w3schools.com/howto/howto_css_custom_checkbox.asp 
+    */
+.addPlaylistContainer {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    padding-left: 35px;
+    margin-bottom: 6px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.addPlaylistContainer input {
+    /* hide the default checkbox from browsers */
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.addPlaylistContainer .checkmark {
+    /* design of the custom checkbox */
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+
+    top: 0;
+    left: 0;
+}
+
+.addPlaylistContainer input:checked ~ .checkmark {
+    /* checked */
+    background-color: #266;
+}
+
+.addPlaylistContainer .checkmark:after {
+    /* create the checkmark/indicator */
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.addPlaylistContainer input:checked ~ .checkmark:after {
+    /* show the checkmark */
+    display: block;
+}
+
+.addPlaylistContainer .checkmark:after {
+    /* design the checkmark */
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+    /*
+    * End of the Code Snippet
+    */
