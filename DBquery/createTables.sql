@@ -1,7 +1,7 @@
 -- generate the tables
 
 CREATE TABLE Artist (
-    artistID    INT NOT NULL AUTO_INCREMENT
+    artistID    INT NOT NULL
     , `name`    VARCHAR(200) NOT NULL
     , thumbnail VARCHAR(200) DEFAULT NULL
     
@@ -10,7 +10,7 @@ CREATE TABLE Artist (
 
 
 CREATE TABLE Album (
-    albumID         INT NOT NULL AUTO_INCREMENT
+    albumID         INT NOT NULL
     , `name`        VARCHAR(200) NOT NULL
     , releaseYear   YEAR DEFAULT NULL
     , thumbnail     VARCHAR(200) DEFAULT NULL
@@ -41,9 +41,26 @@ CREATE TABLE `User` (
     , lName         VARCHAR(50) NOT NULL
     , fName         VARCHAR(50) NOT NULL
     , `password`    VARCHAR(300) NOT NULL
-    , category      VARCHAR(10) NOT NULL
     
     , PRIMARY KEY(userID)
+);
+
+
+CREATE TABLE `Role` (
+    roleID      INT NOT NULL
+    , `name`    VARCHAR(10) NOT NULL
+
+    , PRIMARY KEY(roleID)
+);
+
+
+CREATE TABLE UserRole (
+    roleID      INT NOT NULL
+    , userID    INT NOT NULL
+
+    , PRIMARY KEY(roleID, userID)
+    , CONSTRAINT FK_UserRole_Role FOREIGN KEY(roleID) REFERENCES `Role`(roleID)
+    , CONSTRAINT FK_UserRole_User FOREIGN KEY(userID) REFERENCES `User`(userID)
 );
 
 
@@ -56,6 +73,7 @@ CREATE TABLE UserPlaylist (
     , CONSTRAINT FK_UserPlaylist_User FOREIGN KEY(userID) REFERENCES `User`(userID)
 );
 
+
 CREATE TABLE Playlist (
     ID              INT NOT NULL AUTO_INCREMENT
     , playlistID    INT NOT NULL
@@ -65,3 +83,4 @@ CREATE TABLE Playlist (
     , CONSTRAINT FK_Playlist_UserPlaylist FOREIGN KEY(playlistID) REFERENCES UserPlaylist(playlistID)
     , CONSTRAINT FK_Playlist_Track FOREIGN KEY(trackID) REFERENCES Track(trackID)
 );
+
