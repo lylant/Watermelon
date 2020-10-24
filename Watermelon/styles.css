@@ -106,6 +106,12 @@ tr:hover {
     text-shadow: 1px 1px #aaa;
 }
 
+.navigationBar p .Admin {
+    color: #933;
+    font-weight: bold;
+    text-shadow: 1px 1px #aaa;
+}
+
 
 
 /* search.php */
