@@ -31,8 +31,12 @@
                                 , US.userID
                                 , US.lName
                                 , US.fName
-                                , US.category
+                                , RO.name AS category
                             FROM `User` US
+                            INNER JOIN UserRole UR
+                                ON US.userID = UR.userID
+                            INNER JOIN `Role` RO
+                                ON UR.roleID = RO.roleID
                             WHERE US.username = '$username'
                                 AND US.password = '$passwordHashed';");
             $queryLoginResult = $dbConn -> query($queryLogin)
