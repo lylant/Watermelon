@@ -3,20 +3,24 @@
 # 1. About the Project
 This project is to build a website for music streaming service. This website should allow customers to search and look around artists, albums and titles, also allow them to manage their playlists and edit the contents of the playlists, etc.
 
-## 1.1. Tech-Stacks for the Project
-* HTML5
+## 1.1. Demo Website Available
+* [Link](http://ec2-13-55-220-163.ap-southeast-2.compute.amazonaws.com "Public Demo Website on AWS")
+
+## 1.2. Main Tech-Stacks for the Project
+* HTML
 * CSS
 * JavaScript
 * PHP
 * MariaDB
 
-## 1.2. Test-Server System Environments
-* Linux Ubuntu 20.04.1
+## 1.3. Server System Environments
+* Amazon EC2
+* Ubuntu Server 20.04 LTS
 * Apache 2.4.41
 * PHP 7.4.3
 * MariaDB 10.5.5
 
-## 1.3. Functionalities
+## 1.4. Functionalities
 * Search with a keyword
 * View detail about a specific artist/album/track
 * Play a track
