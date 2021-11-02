@@ -17,7 +17,6 @@ The project aims to practice building a operating website without using web fram
 * PHP
 * MariaDB
 
-
 # Architectures
 
 ## Software Architecture
