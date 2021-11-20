@@ -8,7 +8,7 @@ This project is originally established as an assignment during the study at West
 The project aims to practice building a operating website without using web frameworks. This is a very simplified web application development and leaves out aspects that would be requirements of a real music streaming web application. The website should allow customers to search and look around artists, albums and titles, also allow them to manage their playlists and edit the contents of the playlists, and several minor functionalities.
 
 ## Demo Website Available
-* [Link](http://ec2-13-55-220-163.ap-southeast-2.compute.amazonaws.com "Public Demo Website on AWS")
+* [Link](http://ec2-13-239-62-184.ap-southeast-2.compute.amazonaws.com "Public Demo Website on AWS")
 
 ## Main Tech-Stacks for the Project
 * HTML
